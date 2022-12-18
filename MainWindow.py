@@ -36,20 +36,50 @@ class Ui_GUI_IQFARMA(object):
         self.Button_confirmacion = QtWidgets.QPushButton(self.centralwidget)
         self.Button_confirmacion.setGeometry(QtCore.QRect(520, 760, 61, 71))
         self.Button_confirmacion.setObjectName("Button_confirmacion")
+        ## Estado del sistema
+        self.label_estado = QtWidgets.QLabel(self.centralwidget)
+        self.label_estado.setGeometry(QtCore.QRect(40, 30, 207, 17))
+        self.label_estado.setObjectName("label_estado")
         ## Fecha 
         self.label_fecha = QtWidgets.QLabel(self.centralwidget)
-        self.label_fecha.setGeometry(QtCore.QRect(560, 30, 67, 17))
+        self.label_fecha.setGeometry(QtCore.QRect(480, 30, 207, 17))
         self.label_fecha.setObjectName("label_fecha")
         """USUARIO widgets"""
         ## Boton usuario
         self.Button_usuario = QtWidgets.QPushButton(self.centralwidget)
-        self.Button_usuario.setGeometry(QtCore.QRect(240, 30, 31, 21))
+        self.Button_usuario.setGeometry(QtCore.QRect(220, 30, 31, 21))
         self.Button_usuario.setText("")
         self.Button_usuario.setObjectName("Button_usuario")
+        self.Button_usuario.setIcon(QtGui.QIcon(HEADER_PATH+'resources/userIcon.png'))
         ## Label usuario
         self.label_usuario = QtWidgets.QLabel(self.centralwidget)
-        self.label_usuario.setGeometry(QtCore.QRect(280, 30, 67, 17))
+        self.label_usuario.setGeometry(QtCore.QRect(260, 30, 167, 17))
         self.label_usuario.setObjectName("label_usuario")
+        """Parihuela_Izquierda Widgets"""
+        ## Led
+        image = QtGui.QImage(HEADER_PATH+'resources/green-led-off.png')
+        image=image.scaled(29, 25,QtCore.Qt.KeepAspectRatio)
+        self.led_ParIzq = QtWidgets.QLabel(self.centralwidget)
+        self.led_ParIzq.setPixmap(QtGui.QPixmap.fromImage(image))
+        self.led_ParIzq.setGeometry(QtCore.QRect(140, 120, 29, 25))
+        self.led_ParIzq.setObjectName("led_ParIzq")
+        ## Label
+        self.label_ParIzq = QtWidgets.QLabel(self.centralwidget)
+        self.label_ParIzq.setGeometry(QtCore.QRect(20, 120, 111, 17))
+        self.label_ParIzq.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_ParIzq.setObjectName("label_ParIzq")
+        """Parihuela_Izquierda Widgets"""
+        ## Led
+        image = QtGui.QImage(HEADER_PATH+'resources/green-led-off.png')
+        image=image.scaled(29, 25,QtCore.Qt.KeepAspectRatio)
+        self.led_ParDer = QtWidgets.QLabel(self.centralwidget)
+        self.led_ParDer.setPixmap(QtGui.QPixmap.fromImage(image))
+        self.led_ParDer.setGeometry(QtCore.QRect(220, 120, 29, 25))
+        self.led_ParDer.setObjectName("led_ParDer")
+        ## Label
+        self.label_ParDer = QtWidgets.QLabel(self.centralwidget)
+        self.label_ParDer.setGeometry(QtCore.QRect(260, 120, 121, 17))
+        self.label_ParDer.setObjectName("label_ParDer")
         """Inicia_Ciclo_Robot Widgets"""
         ## Led 
         image = QtGui.QImage(HEADER_PATH+'resources/green-led-off.png')
@@ -146,31 +176,6 @@ class Ui_GUI_IQFARMA(object):
         self.label_PasaCara6 = QtWidgets.QLabel(self.centralwidget)
         self.label_PasaCara6.setGeometry(QtCore.QRect(220, 590, 92, 17))
         self.label_PasaCara6.setObjectName("label_PasaCara6")
-        """Parihuela_Izquierda Widgets"""
-        ## Led
-        image = QtGui.QImage(HEADER_PATH+'resources/green-led-off.png')
-        image=image.scaled(29, 25,QtCore.Qt.KeepAspectRatio)
-        self.led_ParIzq = QtWidgets.QLabel(self.centralwidget)
-        self.led_ParIzq.setPixmap(QtGui.QPixmap.fromImage(image))
-        self.led_ParIzq.setGeometry(QtCore.QRect(140, 120, 29, 25))
-        self.led_ParIzq.setObjectName("led_ParIzq")
-        ## Label
-        self.label_ParIzq = QtWidgets.QLabel(self.centralwidget)
-        self.label_ParIzq.setGeometry(QtCore.QRect(20, 120, 111, 17))
-        self.label_ParIzq.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.label_ParIzq.setObjectName("label_ParIzq")
-        """Parihuela_Izquierda Widgets"""
-        ## Led
-        image = QtGui.QImage(HEADER_PATH+'resources/green-led-off.png')
-        image=image.scaled(29, 25,QtCore.Qt.KeepAspectRatio)
-        self.led_ParDer = QtWidgets.QLabel(self.centralwidget)
-        self.led_ParDer.setPixmap(QtGui.QPixmap.fromImage(image))
-        self.led_ParDer.setGeometry(QtCore.QRect(220, 120, 29, 25))
-        self.led_ParDer.setObjectName("led_ParDer")
-        ## Label
-        self.label_ParDer = QtWidgets.QLabel(self.centralwidget)
-        self.label_ParDer.setGeometry(QtCore.QRect(260, 120, 121, 17))
-        self.label_ParDer.setObjectName("label_ParDer")
         """Peso Widgets"""
         ## Label
         self.label_PasaPeso = QtWidgets.QLabel(self.centralwidget)
@@ -264,7 +269,8 @@ class Ui_GUI_IQFARMA(object):
         self.Button_inicio.setText(_translate("GUI_IQFARMA", "I"))
         self.Button_confirmacion.setText(_translate("GUI_IQFARMA", "C"))
         self.label_usuario.setText(_translate("GUI_IQFARMA", "user: "))
-        self.label_fecha.setText(_translate("GUI_IQFARMA", "Fecha"))
+        self.label_estado.setText(_translate("GUI_IQFARMA", "Estado: Detenido"))
+        self.label_fecha.setText(_translate("GUI_IQFARMA", "Fecha: "))
         self.label_CicloRobot.setText(_translate("GUI_IQFARMA", "Inicia Ciclo Robot"))
         self.label_PresenciaCaja.setText(_translate("GUI_IQFARMA", "Presencia Caja"))
         self.label_PasaCara1.setText(_translate("GUI_IQFARMA", "Pasa 1era Cara"))
