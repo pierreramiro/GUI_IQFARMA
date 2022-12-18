@@ -39,26 +39,35 @@ class GUI(QtWidgets.QMainWindow):
         
     """Timers Functions"""
     def updateDate(self):
-        self.ui.label_fecha.setText(datetime.now().strftime("%B %d, %Y %H:%M:%S"))
+        try:
+            self.ui.label_fecha.setText(datetime.now().strftime("%B %d, %Y %H:%M:%S"))
+        except KeyboardInterrupt:
+            self.close()
         
     """Buttons pressed Functions"""
     def button_emergencia_pressed(self):
         if not(self.flagActiveUser):
             return
+        self.ui.label_estado.setText("Estado: Detenido")
+        ## Put some code here
         
     def button_parada_pressed(self):
         if not(self.flagActiveUser):
             return
+        self.ui.label_estado.setText("Estado: Detenido")
+        ## Put some code here
         
     def button_inicio_pressed(self):
-        print(self.flagActiveUser)
         if not(self.flagActiveUser):
             return
         self.ui.label_estado.setText("Estado: Operando")
+        ## Put some code here
         
     def button_confirmacion_pressed(self):
         if not(self.flagActiveUser):
             return
+        ## Put some code here
+        
     ## Funciones de Dialog
     def button_usuario_pressed(self):
         dlg = UsuarioDialogBox(self)
