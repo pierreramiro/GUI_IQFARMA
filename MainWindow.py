@@ -207,7 +207,7 @@ class Ui_GUI_IQFARMA(object):
         self.label_contador.setObjectName("label_contador")
         """Alarma1 Widgets"""
         ## Led
-        image = QtGui.QImage(HEADER_PATH+'resources/green-led-off.png')
+        image = QtGui.QImage(HEADER_PATH+'resources/amber-led-off.png')
         image=image.scaled(29, 25,QtCore.Qt.KeepAspectRatio)
         self.led_Alarma1 = QtWidgets.QLabel(self.centralwidget)
         self.led_Alarma1.setPixmap(QtGui.QPixmap.fromImage(image))
@@ -219,7 +219,7 @@ class Ui_GUI_IQFARMA(object):
         self.label_Alarma1.setObjectName("label_Alarma1")
         """Alarma2 Widgets"""
         ## Led
-        image = QtGui.QImage(HEADER_PATH+'resources/green-led-off.png')
+        image = QtGui.QImage(HEADER_PATH+'resources/amber-led-off.png')
         image=image.scaled(29, 25,QtCore.Qt.KeepAspectRatio)
         self.led_Alarma2 = QtWidgets.QLabel(self.centralwidget)
         self.led_Alarma2.setPixmap(QtGui.QPixmap.fromImage(image))
@@ -231,7 +231,7 @@ class Ui_GUI_IQFARMA(object):
         self.label_Alarma2.setObjectName("label_Alarma2")
         """Alarma3 Widgets"""
         ## Led
-        image = QtGui.QImage(HEADER_PATH+'resources/green-led-off.png')
+        image = QtGui.QImage(HEADER_PATH+'resources/amber-led-on.png')
         image=image.scaled(29, 25,QtCore.Qt.KeepAspectRatio)
         self.led_Alarma3 = QtWidgets.QLabel(self.centralwidget)
         self.led_Alarma3.setPixmap(QtGui.QPixmap.fromImage(image))
@@ -246,6 +246,7 @@ class Ui_GUI_IQFARMA(object):
         self.plainTextEdit_contador.setGeometry(QtCore.QRect(600, 580, 61, 31))
         self.plainTextEdit_contador.setObjectName("plainTextEdit")
         self.plainTextEdit_contador.setReadOnly(True)
+        self.plainTextEdit_contador.setPlainText("0")
         ## Configuramos
         GUI_IQFARMA.setCentralWidget(self.centralwidget)
         # ## Configuramos la barra de menu
@@ -268,7 +269,7 @@ class Ui_GUI_IQFARMA(object):
         self.Button_parada.setText(_translate("GUI_IQFARMA", "O"))
         self.Button_inicio.setText(_translate("GUI_IQFARMA", "I"))
         self.Button_confirmacion.setText(_translate("GUI_IQFARMA", "C"))
-        self.label_usuario.setText(_translate("GUI_IQFARMA", "user: "))
+        self.label_usuario.setText(_translate("GUI_IQFARMA", ""))
         self.label_estado.setText(_translate("GUI_IQFARMA", "Estado: Detenido"))
         self.label_fecha.setText(_translate("GUI_IQFARMA", "Fecha: "))
         self.label_CicloRobot.setText(_translate("GUI_IQFARMA", "Inicia Ciclo Robot"))

@@ -26,6 +26,7 @@ class GUI(QtWidgets.QMainWindow):
         ## creamos variables
         self.list_leds_widgets=[self.ui.led_ParIzq,self.ui.led_ParDer,self.ui.led_iniciaCicloRobot,self.ui.led_PresenciaCaja,self.ui.led_Cara1,self.ui.led_Cara2,self.ui.led_Cara3,self.ui.led_Cara4,self.ui.led_Peso,self.ui.led_Imprime,self.ui.led_Cara5,self.ui.led_Cara6]
         self.idLedState=0
+        self.counterCajas=115
         ## Creamos Flags
         self.flagActiveUser = False
         self.flagCara1=False
@@ -54,11 +55,13 @@ class GUI(QtWidgets.QMainWindow):
     def test(self):
         if self.idLedState==len(self.list_leds_widgets):
             ## Resetamos los leds
+            self.counterCajas+=1
             self.idLedState=0
             image = QtGui.QImage(HEADER_PATH+'resources/green-led-off.png')
             image=image.scaled(29, 25,QtCore.Qt.KeepAspectRatio)    
             for led in self.list_leds_widgets:
                 led.setPixmap(QtGui.QPixmap.fromImage(image))
+            self.ui.plainTextEdit_contador.setPlainText(str(self.counterCajas))
             return            
         led=self.list_leds_widgets[self.idLedState]
         image = QtGui.QImage(HEADER_PATH+'resources/green-led-on.png')
