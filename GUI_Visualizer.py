@@ -31,7 +31,7 @@ class GUI(QtWidgets.QMainWindow):
         GUI
         
     def FuncionTimer1(self):
-        print("hola",self.flagCara1)
+        1#print("hola",self.flagCara1)
         
     
 class UuarioDialogBox():
