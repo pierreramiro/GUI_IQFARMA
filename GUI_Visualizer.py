@@ -1,4 +1,4 @@
-from MainWindow import Ui_GUI_IQFARMA
+from MainWindow import Ui_GUI_IQFARMA,HEADER_PATH
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QTimer, QTime, QDate
@@ -9,7 +9,7 @@ import pandas as pd ## Libreria para leer archivo csv
 import logging ## Libreria para info Logging
 from datetime import datetime ## Linreria para obtener fecha
 
-"""Variables gloabales"""
+"""Variables globales"""
 userData=[]
    
 """ 
@@ -22,10 +22,14 @@ class GUI(QtWidgets.QMainWindow):
         QtWidgets.QMainWindow.__init__(self)
         ## Creamos nuestra GUI
         self.ui = Ui_GUI_IQFARMA()
-        self.ui.setupUi(self)        
+        self.ui.setupUi(self)    
+        ## creamos variables
+        self.list_leds_widgets=[self.ui.led_ParIzq,self.ui.led_ParDer,self.ui.led_iniciaCicloRobot,self.ui.led_PresenciaCaja,self.ui.led_Cara1,self.ui.led_Cara2,self.ui.led_Cara3,self.ui.led_Cara4,self.ui.led_Peso,self.ui.led_Imprime,self.ui.led_Cara5,self.ui.led_Cara6]
+        self.idLedState=0
         ## Creamos Flags
         self.flagActiveUser = False
         self.flagCara1=False
+        self.flagOperando=False
         ## Conectamos botones con las funciones
         self.ui.Button_emergencia.pressed.connect(self.button_emergencia_pressed)
         self.ui.Button_inicio.pressed.connect(self.button_inicio_pressed)
@@ -36,6 +40,9 @@ class GUI(QtWidgets.QMainWindow):
         self.timerUpdateDate=QTimer()
         self.timerUpdateDate.timeout.connect(self.updateDate)
         self.timerUpdateDate.start(500)
+        ## Cretamos Qtimers para evitar atasco en el constructor de la GUI
+        self.timerTest=QTimer()
+        self.timerTest.timeout.connect(self.test)
         
     """Timers Functions"""
     def updateDate(self):
@@ -43,24 +50,43 @@ class GUI(QtWidgets.QMainWindow):
             self.ui.label_fecha.setText(datetime.now().strftime("%B %d, %Y %H:%M:%S"))
         except KeyboardInterrupt:
             self.close()
+            
+    def test(self):
+        if self.idLedState==len(self.list_leds_widgets):
+            ## Resetamos los leds
+            self.idLedState=0
+            image = QtGui.QImage(HEADER_PATH+'resources/green-led-off.png')
+            image=image.scaled(29, 25,QtCore.Qt.KeepAspectRatio)    
+            for led in self.list_leds_widgets:
+                led.setPixmap(QtGui.QPixmap.fromImage(image))
+            return            
+        led=self.list_leds_widgets[self.idLedState]
+        image = QtGui.QImage(HEADER_PATH+'resources/green-led-on.png')
+        image=image.scaled(29, 25,QtCore.Qt.KeepAspectRatio)    
+        led.setPixmap(QtGui.QPixmap.fromImage(image))
+        self.idLedState+=1          
         
+    
     """Buttons pressed Functions"""
     def button_emergencia_pressed(self):
         if not(self.flagActiveUser):
             return
         self.ui.label_estado.setText("Estado: Detenido")
         ## Put some code here
+        self.timerTest.stop()
         
     def button_parada_pressed(self):
         if not(self.flagActiveUser):
             return
         self.ui.label_estado.setText("Estado: Detenido")
         ## Put some code here
+        self.timerTest.stop()
         
     def button_inicio_pressed(self):
         if not(self.flagActiveUser):
             return
         self.ui.label_estado.setText("Estado: Operando")
+        self.timerTest.start(250)
         ## Put some code here
         
     def button_confirmacion_pressed(self):
