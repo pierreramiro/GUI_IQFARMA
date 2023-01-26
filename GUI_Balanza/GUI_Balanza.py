@@ -21,7 +21,18 @@ class GUI(QtWidgets.QMainWindow):
         ## Creamos nuestra GUI
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)    
+        
+
+        ## Conectamos el boton de peso_Action
+        self.ui.pushButton_actionPeso.pressed.connect(self.actionPeso)
        
+    def actionPeso(self):
+        ##obtenemos valor del peso en "string"
+        texto=self.ui.plainTextEdit_peso.toPlainText()
+        ## lo convertimos a float
+        peso=float(texto)
+        print("El peso es de: {}".format(peso))
+
 """ //////////////////////////////////////////
     //                Main                  //
     //////////////////////////////////////////

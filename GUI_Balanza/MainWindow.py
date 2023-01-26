@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'untitled.ui'
+# Form implementation generated from reading ui file 'template.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -17,33 +17,36 @@ class Ui_MainWindow(object):
         MainWindow.resize(976, 616)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(320, 60, 141, 41))
-        self.label.setObjectName("label")
-        self.plainTextEdit = QtWidgets.QPlainTextEdit(self.centralwidget)
-        self.plainTextEdit.setGeometry(QtCore.QRect(470, 50, 151, 61))
+        self.label_peso = QtWidgets.QLabel(self.centralwidget)
+        self.label_peso.setGeometry(QtCore.QRect(300, 60, 161, 41))
+        self.label_peso.setObjectName("label_peso")
+        self.plainTextEdit_peso = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.plainTextEdit_peso.setGeometry(QtCore.QRect(470, 50, 151, 61))
         font = QtGui.QFont()
         font.setPointSize(31)
-        self.plainTextEdit.setFont(font)
-        self.plainTextEdit.setObjectName("plainTextEdit")
+        self.plainTextEdit_peso.setFont(font)
+        self.plainTextEdit_peso.setObjectName("plainTextEdit_peso")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(300, 160, 111, 61))
         self.pushButton.setObjectName("pushButton")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setGeometry(QtCore.QRect(550, 160, 111, 61))
         self.pushButton_2.setObjectName("pushButton_2")
-        self.plainTextEdit_2 = QtWidgets.QPlainTextEdit(self.centralwidget)
-        self.plainTextEdit_2.setGeometry(QtCore.QRect(60, 280, 831, 281))
+        self.plainTextEdit_terminal = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.plainTextEdit_terminal.setGeometry(QtCore.QRect(60, 280, 831, 281))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
-        self.plainTextEdit_2.setFont(font)
-        self.plainTextEdit_2.setStyleSheet("background-color: rgb(0, 0, 0);\n"
+        self.plainTextEdit_terminal.setFont(font)
+        self.plainTextEdit_terminal.setStyleSheet("background-color: rgb(0, 0, 0);\n"
 "color: rgb(255, 255, 255);")
-        self.plainTextEdit_2.setObjectName("plainTextEdit_2")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(60, 230, 201, 41))
-        self.label_2.setObjectName("label_2")
+        self.plainTextEdit_terminal.setObjectName("plainTextEdit_terminal")
+        self.label_historial = QtWidgets.QLabel(self.centralwidget)
+        self.label_historial.setGeometry(QtCore.QRect(60, 230, 201, 41))
+        self.label_historial.setObjectName("label_historial")
+        self.pushButton_actionPeso = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_actionPeso.setGeometry(QtCore.QRect(650, 80, 111, 21))
+        self.pushButton_actionPeso.setObjectName("pushButton_actionPeso")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 976, 22))
@@ -59,11 +62,12 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "Valor de la Balanza"))
-        self.plainTextEdit.setPlainText(_translate("MainWindow", "220 gr"))
+        self.label_peso.setText(_translate("MainWindow", "Valor de la Balanza(gr)"))
+        self.plainTextEdit_peso.setPlainText(_translate("MainWindow", "220"))
         self.pushButton.setText(_translate("MainWindow", "PushButton"))
         self.pushButton_2.setText(_translate("MainWindow", "PushButton"))
-        self.plainTextEdit_2.setPlainText(_translate("MainWindow", "[INFO] 2022-23-1 - (main.py) : Value received: 220 gr\n"
+        self.plainTextEdit_terminal.setPlainText(_translate("MainWindow", "[INFO] 2022-23-1 - (main.py) : Value received: 220 gr\n"
 "[INFO] 2022-23-1 - (main.py^) : Command Right sended\n"
 ""))
-        self.label_2.setText(_translate("MainWindow", "HIstorial de comandos"))
+        self.label_historial.setText(_translate("MainWindow", "HIstorial de comandos"))
+        self.pushButton_actionPeso.setText(_translate("MainWindow", "imprime Peso"))

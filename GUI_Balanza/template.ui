@@ -14,20 +14,20 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="label_peso">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>300</x>
       <y>60</y>
-      <width>141</width>
+      <width>161</width>
       <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>Valor de la Balanza</string>
+     <string>Valor de la Balanza(gr)</string>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit">
+   <widget class="QPlainTextEdit" name="plainTextEdit_peso">
     <property name="geometry">
      <rect>
       <x>470</x>
@@ -42,7 +42,7 @@
      </font>
     </property>
     <property name="plainText">
-     <string>220 gr</string>
+     <string>220</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
@@ -71,7 +71,7 @@
      <string>PushButton</string>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_2">
+   <widget class="QPlainTextEdit" name="plainTextEdit_terminal">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -96,7 +96,7 @@ color: rgb(255, 255, 255);</string>
 </string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="label_historial">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -107,6 +107,19 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>HIstorial de comandos</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_actionPeso">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>80</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>imprime Peso</string>
     </property>
    </widget>
   </widget>
