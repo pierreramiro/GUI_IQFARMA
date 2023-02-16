@@ -10,6 +10,24 @@ import logging ## Libreria para info Logging
 from datetime import datetime ## Linreria para obtener fecha
 from threading import Thread
 import time
+import snap7
+
+""" GLOBAL VARIABLE """
+FLAG_PLC_AVALABLE=False
+
+
+#CARACTERÍSTICAS HARDWARE Y SOFTWARE DEL PLC
+IP = '192.168.0.1'
+RACK = 0
+SLOT = 1
+
+DB_NUMBER = 2
+START_ADDRESS = 0
+SIZE = 259
+
+value = 1
+
+
 """ 
 //////////////////////////////////////////
 //            MAIN CLASS GUI            //
@@ -61,6 +79,18 @@ class GUI(QtWidgets.QMainWindow):
         self.timer_updateTerminalLabel=QTimer()
         self.timer_updateTerminalLabel.timeout.connect(self.updateTerminalLabel)
         self.timer_updateTerminalLabel.start(100)
+        """ Realizamos la conexión con el PLC """
+        if FLAG_PLC_AVALABLE:
+            #CONEXIÓN
+            self.plc = snap7.client.Client()
+            self.plc.connect(IP, RACK, SLOT)
+            #LECTURA DEL BLOQUE DE DATOS DEL PLC
+            self.sdb = self.plc.db_read(DB_NUMBER, START_ADDRESS, SIZE)
+
+    def writeBool(self,db_number, start_offset, bit_offset, value): 
+        reading = self.plc.db_read(db_number, start_offset, 1)    
+        snap7.util.set_bool(reading, 0, bit_offset, value)   
+        self.plc.db_write(db_number, start_offset, reading)       
 
     def updateTerminalLabel(self):
         if not self._FLAG_initProcess:
@@ -75,17 +105,20 @@ class GUI(QtWidgets.QMainWindow):
         self.ui.plainTextEdit_terminal.setPlainText(nuevoText)
         
     def sondeaVarPLC(self):
-        while True:
-            time.sleep(0.5)
+        if FLAG_PLC_AVALABLE:
             """"""""""""""""""""""""""""""""""""""""""""""""""""""
             """"""""""""""""""""""""""""""""""""""""""""""""""""""
-            print("wait for peso in PLC")
-            time.sleep(0.1)
+            while True:
+                print("wait for peso in PLC")
+                time.sleep(1)
+            #LECTURA DEL PESO
+            self.Peso = self.db[514:515].decode('UTF-8').strip('\x00')
+            """"""""""""""""""""""""""""""""""""""""""""""""""""""
+            """"""""""""""""""""""""""""""""""""""""""""""""""""""
+        else:
+            time.sleep(2)
             self.Peso+=0.1
             self.idCaja+=1
-            break
-            """"""""""""""""""""""""""""""""""""""""""""""""""""""
-            """"""""""""""""""""""""""""""""""""""""""""""""""""""
         self._FLAG_initProcess=True
         self.oldText=self.ui.plainTextEdit_terminal.toPlainText()
         
@@ -123,6 +156,8 @@ class GUI(QtWidgets.QMainWindow):
         """"""""""""""""""""""""""""""""""""""""""""""""""""""
         """"""""""""""""""""""""""""""""""""""""""""""""""""""
         """ Soltamos al PLC para continuar con el bucle """
+        if FLAG_PLC_AVALABLE:
+            self.writeBool(DB_NUMBER, 258, 0, value)
         """"""""""""""""""""""""""""""""""""""""""""""""""""""
         """"""""""""""""""""""""""""""""""""""""""""""""""""""
         
