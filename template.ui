@@ -1,581 +1,581 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>GUI_IQFARMA</class>
- <widget class="QMainWindow" name="GUI_IQFARMA">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>789</width>
-    <height>878</height>
+    <width>1112</width>
+    <height>574</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="windowTitle">
-   <string>GUI_IQFARMA</string>
+   <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="Button_emergencia">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>760</y>
-      <width>61</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(239, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="Button_parada">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>760</y>
-      <width>61</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>O</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="Button_inicio">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>760</y>
-      <width>61</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>I</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="Button_confirmacion">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>760</y>
-      <width>61</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>C</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="Button_usuario">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>30</y>
-      <width>31</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_usuario">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>30</y>
-      <width>67</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>user: </string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_fecha">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>30</y>
-      <width>67</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Fecha</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_CicloRobot">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>171</y>
-      <width>117</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Inicia Ciclo Robot</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="led_iniciaCicloRobot">
-    <property name="geometry">
-     <rect>
-      <x>181</x>
-      <y>166</y>
-      <width>29</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(239, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_PresenciaCaja">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>218</y>
-      <width>98</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Presencia Caja</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="led_PresenciaCaja">
-    <property name="geometry">
-     <rect>
-      <x>181</x>
-      <y>212</y>
-      <width>29</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(239, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="led_Cara2">
-    <property name="geometry">
-     <rect>
-      <x>181</x>
-      <y>304</y>
-      <width>29</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(239, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_PasaCara1">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>264</y>
-      <width>100</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pasa 1era Cara</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="led_Cara1">
-    <property name="geometry">
-     <rect>
-      <x>181</x>
-      <y>258</y>
-      <width>29</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(239, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="led_Cara3">
-    <property name="geometry">
-     <rect>
-      <x>181</x>
-      <y>350</y>
-      <width>29</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(239, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="led_Cara4">
-    <property name="geometry">
-     <rect>
-      <x>181</x>
-      <y>396</y>
-      <width>29</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(239, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_ParIzq">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>120</y>
-      <width>111</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Parihuela Izq</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_ParDer">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>120</y>
-      <width>121</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Parihuela Der</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_PasaCara2">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>311</y>
-      <width>94</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pasa 2da Cara</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_PasaCara3">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>357</y>
-      <width>100</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pasa 3era Cara</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_PasaCara4">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>404</y>
-      <width>92</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pasa 4ta Cara</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_PasaPeso">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>450</y>
-      <width>68</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pasa Peso</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="led_Peso">
-    <property name="geometry">
-     <rect>
-      <x>181</x>
-      <y>442</y>
-      <width>29</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(239, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="led_Imprime">
-    <property name="geometry">
-     <rect>
-      <x>181</x>
-      <y>488</y>
-      <width>29</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(239, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_Imprime">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>497</y>
-      <width>118</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Imprime Etiqueta</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_PasaCara4_2">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>543</y>
-      <width>92</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pasa 5ta Cara</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="led_Cara5">
-    <property name="geometry">
-     <rect>
-      <x>181</x>
-      <y>534</y>
-      <width>29</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(239, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="led_Cara6">
-    <property name="geometry">
-     <rect>
-      <x>181</x>
-      <y>580</y>
-      <width>29</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(239, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_PasaCara4_3">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>590</y>
-      <width>92</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pasa 6ta Cara</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_fecha_2">
-    <property name="geometry">
-     <rect>
-      <x>480</x>
-      <y>590</y>
-      <width>131</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Contador Cajas:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_Alarma1">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>160</y>
-      <width>131</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Alarma_1</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="led_Alarma1">
-    <property name="geometry">
-     <rect>
-      <x>480</x>
-      <y>150</y>
-      <width>31</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(239, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_Alarma2">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>210</y>
-      <width>131</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Alarma_2</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="led_Alarma2">
-    <property name="geometry">
-     <rect>
-      <x>480</x>
-      <y>200</y>
-      <width>31</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(239, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_Alarma3">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>260</y>
-      <width>131</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Alarma_3</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="led_Alarma3">
-    <property name="geometry">
-     <rect>
-      <x>480</x>
-      <y>250</y>
-      <width>31</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(239, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="led_ParIzq">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>120</y>
-      <width>29</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(239, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="led_ParDer">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>120</y>
-      <width>29</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(239, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>580</y>
-      <width>61</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::ActionsContextMenu</enum>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <property name="spacing">
+     <number>60</number>
+    </property>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_peso">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>17</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Valor de la Balanza (gr)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPlainTextEdit" name="plainTextEdit_peso">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>31</pointsize>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::RightToLeft</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="plainText">
+           <string/>
+          </property>
+          <property name="centerOnScroll">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label_param1">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>17</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Param1:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_param2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>17</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Param2:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_param3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>17</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Param3:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_param4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>17</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Param4:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_param5">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>17</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Param5:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPlainTextEdit" name="plainTextEdit_param1">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPlainTextEdit" name="plainTextEdit_param3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPlainTextEdit" name="plainTextEdit_param2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPlainTextEdit" name="plainTextEdit_param4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPlainTextEdit" name="plainTextEdit_param5">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <property name="spacing">
+         <number>150</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="pushButton_izq">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>17</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Izquierda</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_der">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>17</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Derecha</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_historial">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>HIstorial de comandos:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPlainTextEdit" name="plainTextEdit_terminal">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="plainText">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="butoneraDigitos">
+      <property name="spacing">
+       <number>40</number>
+      </property>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="pushButton_digito3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="pushButton_digito6">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="pushButton_digito2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="pushButton_digito0">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="pushButton_digito5">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="pushButton_digito7">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="pushButton_digito1">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="pushButton_digito8">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButton_digito4">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="pushButton_digitoDEL">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>DEL</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="pushButton_digito9">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QPushButton" name="pushButton_digitoOK">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>22</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>OK</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>789</width>
+     <width>1112</width>
      <height>22</height>
     </rect>
    </property>

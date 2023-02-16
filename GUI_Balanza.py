@@ -24,7 +24,7 @@ class GUI(QtWidgets.QMainWindow):
         
 
         ## Conectamos el boton de peso_Action
-        self.ui.pushButton_actionPeso.pressed.connect(self.actionPeso)
+        #self.ui.pushButton_actionPeso.pressed.connect(self.actionPeso)
        
     def actionPeso(self):
         ##obtenemos valor del peso en "string"

@@ -1,5 +1,5 @@
 #!/bin/python3
-import GUI_Visualizer
+import GUI_Balanza
 
 if __name__ == "__main__":
-    GUI_Visualizer.setUpGUI()
+    GUI_Balanza.setUpGUI()
